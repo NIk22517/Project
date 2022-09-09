@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import NavBar from "./components/NavBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ImageUpload from "./components/ImageUpload";
+import PhotoFrame from "./components/PhotoFrame";
 
-function App() {
+const App = () => {
+  const [file, setFile] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* NavBar */}
+      <NavBar />
+      <Routes>
+        {/* Upload Image */}
+        <Route
+          path='/'
+          element={<ImageUpload file={file} setFile={setFile} />}
+        />
+        {/* Add Frame to the image */}
+        <Route path='/frame' element={<PhotoFrame file={file} />} />
+        {/* Add Download Button */}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
