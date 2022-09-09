@@ -50,7 +50,7 @@ const ImageContainer = styled.div`
   }
 
   @media (max-width: 676px) {
-    width: 100vw;
+    margin: 0rem;
     img {
       width: 100%;
       height: 100%;

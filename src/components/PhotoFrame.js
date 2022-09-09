@@ -47,9 +47,8 @@ const PhotoFrameContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  height: 80vh;
   position: relative;
-
+  height: 150vh;
   .uploaded-image {
     position: absolute;
     top: 0%;
@@ -71,5 +70,6 @@ const PhotoFrameContainer = styled.div`
 
   @media (max-width: 676px) {
     margin: 0rem;
+    height: 50vh;
   }
 `;
