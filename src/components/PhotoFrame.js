@@ -21,34 +21,46 @@ const PhotoFrame = ({ file }) => {
   return (
     <>
       <DownloadImage downloadElement={downloadElement} />
-      <PhotoFrameContainer ref={downloadElement}>
-        <div className='uploaded-image'>
-          <img
-            className='upload-img'
-            src={URL.createObjectURL(file)}
-            alt='profile'
-            width={width}
-            height={heigth}
-          />
-        </div>
+      <Photo ref={downloadElement}>
+        <PhotoFrameContainer>
+          <div className='uploaded-image'>
+            <img
+              className='upload-img'
+              src={URL.createObjectURL(file)}
+              alt='profile'
+              width={width}
+              height={heigth}
+            />
+          </div>
 
-        <div className='frame-image'>
-          <img className='frame-img' src={FrameOne} alt='' onLoad={onImgLoad} />
-        </div>
-      </PhotoFrameContainer>
+          <div className='frame-image'>
+            <img
+              className='frame-img'
+              src={FrameOne}
+              alt=''
+              onLoad={onImgLoad}
+            />
+          </div>
+        </PhotoFrameContainer>
+      </Photo>
     </>
   );
 };
 
 export default PhotoFrame;
 
+const Photo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 540px;
+`;
+
 const PhotoFrameContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  position: relative;
-  height: 150vh;
   .uploaded-image {
     position: absolute;
     top: 0%;
@@ -57,19 +69,18 @@ const PhotoFrameContainer = styled.div`
     position: absolute;
     top: 0%;
   }
-
-  .upload-img {
-    width: ${(props) => props.width};
-    height: ${(props) => props.height};
+  .frame-image img {
+    width: 420px;
+    height: 540px;
   }
-
-  .frame-img {
-    width: 100%;
-    height: 100%;
+  .uploaded-image img {
+    width: 420px;
+    height: 540px;
+    object-fit: cover;
   }
-
-  @media (max-width: 676px) {
-    margin: 0rem;
-    height: 50vh;
-  }
+  @media screen {
+    img{
+      width: 380px;
+    }
+}
 `;
