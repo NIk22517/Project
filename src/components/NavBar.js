@@ -21,7 +21,7 @@ const NavBar = ({ setFile }) => {
         <NavLink to='/' onClick={handleClick}>
           Home
         </NavLink>
-        <NavLink to='/privacy-policy'>Privacy policy</NavLink>
+        {/* <NavLink to='/privacy-policy'>Privacy policy</NavLink> */}
       </ul>
     </Nav>
   );
