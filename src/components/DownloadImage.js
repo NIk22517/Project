@@ -75,11 +75,4 @@ const Download = styled.div`
       #138808
     );
   }
-
-
-  @media (max-width: 676px) {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
 `;
