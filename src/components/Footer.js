@@ -10,7 +10,7 @@ const Footer = () => {
           <p>Privacy policy</p>
         </Link>
 
-        <p className="copy-right">&copy; Copyright 2022</p>
+        <p className='copy-right'>&copy; Copyright 2022</p>
       </div>
     </FooterStyled>
   );
@@ -25,11 +25,17 @@ const FooterStyled = styled.footer`
   justify-content: center;
   align-items: center;
 
-  p{
-    margin: .5rem 0rem;
+  p {
+    margin: 0.5rem 0rem;
   }
-  .copy-right{
+  .copy-right {
     font-size: 10px;
-    padding-left: .5rem;
+    padding-left: 0.5rem;
+  }
+
+  @media (max-width: 676px) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 `;
