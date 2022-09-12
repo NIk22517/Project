@@ -18,7 +18,7 @@ const ImageUpload = ({ file, setFile }) => {
           accept='image/*'
           onChange={handleChange}
         />
-        <label htmlFor='file'>Select file</label>
+        <label htmlFor='file'>Add Your Photo</label>
 
         {file && <ShowUploadedImage file={file} />}
       </FileInput>

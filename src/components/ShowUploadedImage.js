@@ -9,7 +9,7 @@ const ShowUploadedImage = ({ file }) => {
         <img src={URL.createObjectURL(file)} alt='profile' />
         <div className='button'>
           <Link to='/frame'>
-            <button>Add Frame</button>
+            <button>Choose Frame</button>
           </Link>
         </div>
       </ImageContainer>
