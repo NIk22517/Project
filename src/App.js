@@ -10,7 +10,7 @@ const App = () => {
   return (
     <BrowserRouter>
       {/* NavBar */}
-      <NavBar />
+      <NavBar setFile={setFile} />
       <Routes>
         {/* Upload Image */}
         <Route

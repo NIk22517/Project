@@ -2,19 +2,25 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const NavBar = () => {
+const NavBar = ({ setFile }) => {
+  const handleClick = () => {
+    setFile(null);
+  };
   return (
     <Nav>
       <div className='logo'>
         <NavLink to='/'>
           <img
+            onClick={handleClick}
             src='https://eci.gov.in/uploads/monthly_2022_06/logo.png.d0e6aee2d64193769bffbc6e720bbe96.png'
             alt='logo'
           />
         </NavLink>
       </div>
       <ul className='links'>
-        <NavLink to='/home'>Home</NavLink>
+        <NavLink to='/' onClick={handleClick}>
+          Home
+        </NavLink>
         <NavLink to='/privacy-policy'>Privacy policy</NavLink>
       </ul>
     </Nav>
@@ -28,7 +34,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #EDF4F2;
+  background-color: #edf4f2;
   padding: 1rem;
 
   img {

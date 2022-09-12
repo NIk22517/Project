@@ -11,7 +11,6 @@ const PhotoFrame = ({ file }) => {
 
   const onImgLoad = ({ target: img }) => {
     const { offsetHeight, offsetWidth } = img;
-
     console.log(`Width ${offsetHeight} Height ${offsetWidth}`);
 
     setWidth(offsetWidth);
@@ -19,9 +18,8 @@ const PhotoFrame = ({ file }) => {
   };
 
   return (
-    <>
-      <DownloadImage downloadElement={downloadElement} />
-      <Photo ref={downloadElement}>
+    <PhotoFrameWithDownlod>
+      <Photo ref={downloadElement} heigth={heigth}>
         <PhotoFrameContainer>
           <div className='uploaded-image'>
             <img
@@ -43,18 +41,28 @@ const PhotoFrame = ({ file }) => {
           </div>
         </PhotoFrameContainer>
       </Photo>
-    </>
+      <DownloadImage downloadElement={downloadElement} heigth={heigth} />
+    </PhotoFrameWithDownlod>
   );
 };
 
 export default PhotoFrame;
+
+const PhotoFrameWithDownlod = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+`;
 
 const Photo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 540px;
+  height: 1080px;
+
+  @media (max-width: 676px) {
+    height: 45vh;
+  }
 `;
 
 const PhotoFrameContainer = styled.div`
@@ -69,18 +77,18 @@ const PhotoFrameContainer = styled.div`
     position: absolute;
     top: 0%;
   }
-  .frame-image img {
-    width: 420px;
-    height: 540px;
+  /* .upload-img {
+    width: 300px;
+    height: 300px;
   }
-  .uploaded-image img {
-    width: 420px;
-    height: 540px;
-    object-fit: cover;
-  }
-  @media screen {
-    img{
+
+  .frame-img {
+    width: 300px;
+    height: 300px;
+  } */
+  @media (max-width: 676px) {
+    img {
       width: 380px;
     }
-}
+  }
 `;

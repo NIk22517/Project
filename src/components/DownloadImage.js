@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import * as htmlToImage from "html-to-image";
 
-const DownloadImage = ({ downloadElement }) => {
+const DownloadImage = ({ downloadElement, heigth }) => {
   const downloadImage = async () => {
     const dataUrl = await htmlToImage.toPng(downloadElement.current);
 
@@ -27,8 +27,9 @@ const Download = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute;
-  bottom: -10%; */
+  position: absolute;
+  width: 100%;
+  margin-top: 3rem;
   button {
     background-image: linear-gradient(
       to bottom,
@@ -54,7 +55,6 @@ const Download = styled.div`
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
-    margin: 2rem 0 1rem 0;
     transition: all 0.3s ease;
   }
 
@@ -74,5 +74,12 @@ const Download = styled.div`
       #00a572,
       #138808
     );
+  }
+
+
+  @media (max-width: 676px) {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
   }
 `;
