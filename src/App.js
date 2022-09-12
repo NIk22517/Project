@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ImageUpload from "./components/ImageUpload";
 import PhotoFrame from "./components/PhotoFrame";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [file, setFile] = useState(null);
@@ -21,6 +22,8 @@ const App = () => {
         <Route path='/frame' element={<PhotoFrame file={file} />} />
         {/* Add Download Button */}
       </Routes>
+      {/* Footer */}
+      <Footer />
     </BrowserRouter>
   );
 };

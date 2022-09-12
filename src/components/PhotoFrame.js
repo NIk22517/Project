@@ -90,5 +90,8 @@ const PhotoFrameContainer = styled.div`
     img {
       width: 380px;
     }
+    .upload-img {
+      object-fit: cover;
+    }
   }
 `;
