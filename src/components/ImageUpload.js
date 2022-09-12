@@ -72,7 +72,6 @@ const FileInput = styled.div`
     transition: all 0.2s ease-out;
     color: #342ead;
     font-size: 20px;
-    margin-bottom: 3rem;
   }
 
   input:hover + label,
