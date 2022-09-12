@@ -33,7 +33,7 @@ const FileInput = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   .file {
     opacity: 0;
     width: 0.1px;

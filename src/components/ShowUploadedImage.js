@@ -23,8 +23,8 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem 2rem 1rem 2rem;
-  background-image: linear-gradient(
+  /* padding: 2rem 2rem 1rem 2rem; */
+  /* background-image: linear-gradient(
     to left top,
     #ff9933,
     #ff9b79,
@@ -38,7 +38,7 @@ const ImageContainer = styled.div`
     #00b9b9,
     #00a371,
     #138808
-  );
+  ); */
   border-radius: 20px;
 
   img {
