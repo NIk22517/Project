@@ -11,7 +11,6 @@ const PhotoFrame = ({ file }) => {
 
   const onImgLoad = ({ target: img }) => {
     const { offsetHeight, offsetWidth } = img;
-    console.log(`Width ${offsetHeight} Height ${offsetWidth}`);
 
     setWidth(offsetWidth);
     setHeigth(offsetHeight);

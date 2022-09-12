@@ -95,7 +95,7 @@ const FileInput = styled.div`
     color: #342ead;
   }
   input:focus + label {
-    outline: 1px solid #000;
+    outline: 1px solid  #342ead;
     outline: -webkit-focus-ring-color auto 2px;
   }
 `;
