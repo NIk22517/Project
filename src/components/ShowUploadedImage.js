@@ -108,7 +108,7 @@ const ImageContainer = styled.div`
     margin: 0rem 2rem;
     img {
       width: 100%;
-      height: 100%;
+      height: 50vh;
       padding: 0rem;
     }
   }
