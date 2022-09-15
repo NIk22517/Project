@@ -37,14 +37,22 @@ const FileInput = styled.div`
 
   &::before {
     content: "";
-    background-image: url("https://i.pinimg.com/736x/f7/e9/0a/f7e90adb4024280973203534beca25f7.jpg");
     position: absolute;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
     z-index: -2;
+    background-image: url("https://i.pinimg.com/736x/f7/e9/0a/f7e90adb4024280973203534beca25f7.jpg");
+    background-repeat: no-repeat;
     background-position: center;
-    background-color: #000D20;
+    filter: blur(3px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background-color: #000d20;
   }
   .file {
     opacity: 0;
