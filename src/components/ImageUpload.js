@@ -34,6 +34,18 @@ const FileInput = styled.div`
   justify-content: center;
   align-items: center;
   height: 80vh;
+
+  &::before {
+    content: "";
+    background-image: url("https://i.pinimg.com/736x/f7/e9/0a/f7e90adb4024280973203534beca25f7.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: -2;
+    background-position: center;
+    background-color: #000D20;
+  }
   .file {
     opacity: 0;
     width: 0.1px;
@@ -95,7 +107,7 @@ const FileInput = styled.div`
     color: #342ead;
   }
   input:focus + label {
-    outline: 1px solid  #342ead;
+    outline: 1px solid #342ead;
     outline: -webkit-focus-ring-color auto 2px;
   }
 `;
